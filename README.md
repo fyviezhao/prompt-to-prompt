@@ -11,7 +11,12 @@
 
 ## Setup
 
-This code was tested with Python 3.8, [Pytorch](https://pytorch.org/) 1.11 using pre-trained models through [huggingface / diffusers](https://github.com/huggingface/diffusers#readme).
+This code was tested with Python 3.8, [Pytorch](https://pytorch.org/) 1.11：
+```bash
+$ conda create -n prompt2prompt python=3.8
+$ conda install pytorch==1.11.0 torchvision==0.12.0 torchaudio==0.11.0 cudatoolkit=11.3 -c pytorch
+```
+using pre-trained models through [huggingface / diffusers](https://github.com/huggingface/diffusers#readme).
 Specifically, we implemented our method over  [Latent Diffusion](https://huggingface.co/CompVis/ldm-text2im-large-256) and  [Stable Diffusion](https://huggingface.co/CompVis/stable-diffusion-v1-4).
 Additional required packages are listed in the requirements file.
 The code was tested on a Tesla V100 16GB but should work on other cards with at least **12GB** VRAM.
